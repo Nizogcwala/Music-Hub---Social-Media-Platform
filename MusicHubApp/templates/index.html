@@ -13,6 +13,11 @@
         <div class="links">
             <a href="{{ url_for('artist_search') }}">Search for Artists</a>
             <a href="{{ url_for('track_search') }}">Search for Tracks</a>
+            <form action="{{ url_for('artist_search') }}" method="get">
+                <input type="text" name="artist_name" placeholder="Search for an artist">
+                <button type="submit">Search</button>
+            </form>
+            
         </div>
     </div>
 </body>
