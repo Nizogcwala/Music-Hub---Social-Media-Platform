@@ -61,3 +61,12 @@ a:hover {
 }
 
 /* Additional custom styles can be added here */
+
+.artist {
+    margin-bottom: 20px;
+}
+.artist img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
