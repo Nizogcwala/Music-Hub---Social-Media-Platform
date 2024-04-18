@@ -1,21 +1,63 @@
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
 }
 
+/* Style for the navigation bar */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Style for the main content area */
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-h1 {
+/* Style for headings */
+h1, h2, h3 {
     color: #333;
 }
 
-p {
-    color: #666;
-    line-height: 1.5;
+/* Style for links */
+a {
+    color: #007bff;
+    text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style for buttons */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style for forms */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Additional custom styles can be added here */
