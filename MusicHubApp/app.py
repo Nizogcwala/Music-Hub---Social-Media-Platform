@@ -6,6 +6,20 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+from flask import request
+
+import requests
+
+@app.route('/artist_search')
+def artist_search():
+    artist_name = request.args.get('artist_name')
+    # Make a GET request to the Spotify API
+    response = requests.get('https://api.spotify.com/v1/search', params={'q': artist_name, 'type': 'artist'})
+    # Parse the JSON response and extract the list of artists
+    artists = response.json()['artists']['items']
+    # Now you have the list of artists, proceed with rendering the search results template.
+
+
 @app.route('/artist/<artist_id>')
 def artist(artist_id):
     # Placeholder for fetching artist information
