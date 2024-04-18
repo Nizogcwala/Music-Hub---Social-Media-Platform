@@ -1,36 +1,26 @@
-from flask import Flask, render_template
+from flask import request, jsonify
 
-app = Flask(__name__)
+@app.route('/artist_search')
+def artist_search():
+    # Get the search query from the request parameters
+    query = request.args.get('query')
 
-# Define routes
-@app.route('/')
-def index():
-    return render_template('index.html')
+    # Perform a search for artists using the query (you'll need to implement this)
+    # For example, you can use the Spotify API to search for artists
+    # Replace the placeholder code below with your actual implementation
+    search_results = search_artists(query)
 
-@app.route('/artist/<artist_id>')
-def artist(artist_id):
-    # Placeholder for fetching artist information
-    # Replace this with your implementation to fetch data from Spotify API
-    artist_info = {
-        'id': artist_id,
-        'name': 'Artist Name',
-        'genre': 'Genre',
-        'popularity': 'Popularity'
-    }
-    return render_template('artist.html', artist=artist_info)
+    # Return the search results as JSON
+    return jsonify(search_results)
 
-@app.route('/track/<track_id>')
-def track(track_id):
-    # Placeholder for fetching track information
-    # Replace this with your implementation to fetch data from Spotify API
-    track_info = {
-        'id': track_id,
-        'name': 'Track Name',
-        'artist': 'Artist Name',
-        'album': 'Album Name',
-        'release_date': 'Release Date'
-    }
-    return render_template('track.html', track=track_info)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# Function to perform the artist search (placeholder implementation)
+def search_artists(query):
+    # Placeholder implementation - replace with actual search logic
+    # Here you can use the Spotify API or any other method to search for artists
+    # For demonstration purposes, let's just return some mock data
+    mock_data = [
+        {'name': 'Artist 1', 'id': 'artist_1'},
+        {'name': 'Artist 2', 'id': 'artist_2'},
+        {'name': 'Artist 3', 'id': 'artist_3'}
+    ]
+    return mock_data
