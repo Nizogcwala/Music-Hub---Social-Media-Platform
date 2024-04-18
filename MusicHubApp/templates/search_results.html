@@ -1,0 +1,6 @@
+{% for artist in artists %}
+<div class="artist">
+    <img src="{{ artist.images[0].url }}" alt="{{ artist.name }}">
+    <h3>{{ artist.name }}</h3>
+</div>
+{% endfor %}
