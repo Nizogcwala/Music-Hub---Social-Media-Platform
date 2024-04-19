@@ -20,6 +20,11 @@
                 <input type="text" name="query" placeholder="Search for artists">
                 <button type="submit">Search</button>
             </form>
+            <form action="{{ url_for('track_search') }}" method="GET">
+                <input type="text" name="track_name" placeholder="Search for a track">
+                <button type="submit">Search</button>
+            </form>
+            
             <script src="{{ url_for('static', filename='js/script.js') }}"></script>
         </div>
     </div>
