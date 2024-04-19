@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, app, render_template, request
 
 # Your existing code here...
 
@@ -8,7 +8,7 @@ from flask import Flask, render_template, request
 @app.route('/')
 def index():
     # Fetch track data from the database (replace this with your actual database query)
-    track_data = Track.query.all()
+    track_data = track_data.query.all()
     return render_template('index.html', tracks=track_data)
 
 # Your existing routes here...
