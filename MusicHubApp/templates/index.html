@@ -18,6 +18,13 @@
             <input type="text" id="album_name" name="album_name"><br><br>
             <button type="submit">Search</button>
         </form>
+        <div class="track-info">
+            <h2>{{ track.title }}</h2>
+            <p>Artist: {{ track.artist }}</p>
+            <p>Album: {{ track.album }}</p>
+            <img src="{{ track.cover_image }}" alt="Album Cover">
+        </div>
+        
     </div>
 </body>
 </html>
