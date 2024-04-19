@@ -2,11 +2,12 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif; /* Upbeat font */
 }
 
 /* Style for the navigation bar */
 .navbar {
-    background-color: #1DB954; /* Spotify green */
+    background-color: #87CEFA; /* Powder blue */
     padding: 10px 0;
 }
 
@@ -25,12 +26,12 @@ body, html {
 
 /* Style for headings */
 h1, h2, h3 {
-    color: #1DB954; /* Spotify green */
+    color: #4682B4; /* Dark powder blue */
 }
 
 /* Style for links */
 a {
-    color: #1DB954; /* Spotify green */
+    color: #4682B4; /* Dark powder blue */
     text-decoration: none;
 }
 
@@ -40,15 +41,16 @@ a:hover {
 
 /* Style for buttons */
 .btn {
-    background-color: #1DB954; /* Spotify green */
+    background-color: #4682B4; /* Dark powder blue */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #1ED760; /* Slightly lighter green */
+    background-color: #6495ED; /* Lighter powder blue */
 }
 
 /* Style for forms */
