@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import requests
 
 app = Flask(__name__)
+app.config['STATIC_FOLDER'] = 'static'
 
 # Spotify API credentials
 CLIENT_ID = '8932344d682c47ce80a22d1f2d68ec21'
