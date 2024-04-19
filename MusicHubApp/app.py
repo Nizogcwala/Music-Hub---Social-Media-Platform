@@ -22,15 +22,6 @@ def index():
 def artist_search():
     return render_template('artist_search.html')
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    if request.method == 'POST':
-        # Handle track search form submission
-        track_name = request.form['track_name']
-        # Process the track search and return the results
-    else:
-        return render_template('index.html')
-
 @app.route('/login')
 def login():
     # Redirect the user to Spotify's authorization endpoint
