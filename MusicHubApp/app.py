@@ -4,6 +4,7 @@ from flask import Flask, app, render_template, request
 
 # Database models for tracks, comments, and ratings
 # Your existing code here...
+# Define routes and their corresponding functions
 
 @app.route('/')
 def index():
