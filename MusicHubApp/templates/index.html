@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Hub</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Music Hub</h1>
-        <p>Discover and explore your favorite artists and tracks.</p>
-        <div class="links">
-            <a href="{{ url_for('artist_search') }}">Search for Artists</a>
-            <a href="{{ url_for('track_search') }}">Search for Tracks</a>
-            <form action="{{ url_for('artist_search') }}" method="get">
-                <input type="text" name="artist_name" placeholder="Search for an artist">
-                <button type="submit">Search</button>
-            </form>
-            <form action="{{ url_for('artist_search') }}" method="GET">
-                <input type="text" name="query" placeholder="Search for artists">
-                <button type="submit">Search</button>
-            </form>
-            
-        </div>
+        <p>Enter track information:</p>
+        <form action="{{ url_for('search_track') }}" method="post">
+            <label for="track_name">Track Name:</label>
+            <input type="text" id="track_name" name="track_name"><br><br>
+            <label for="artist_name">Artist Name:</label>
+            <input type="text" id="artist_name" name="artist_name"><br><br>
+            <label for="album_name">Album Name:</label>
+            <input type="text" id="album_name" name="album_name"><br><br>
+            <button type="submit">Search</button>
+        </form>
     </div>
 </body>
 </html>
