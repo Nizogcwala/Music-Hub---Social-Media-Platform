@@ -6,7 +6,7 @@ body, html {
 
 /* Style for the navigation bar */
 .navbar {
-    background-color: #333;
+    background-color: #1DB954; /* Spotify green */
     padding: 10px 0;
 }
 
@@ -25,12 +25,12 @@ body, html {
 
 /* Style for headings */
 h1, h2, h3 {
-    color: #333;
+    color: #1DB954; /* Spotify green */
 }
 
 /* Style for links */
 a {
-    color: #007bff;
+    color: #1DB954; /* Spotify green */
     text-decoration: none;
 }
 
@@ -40,7 +40,7 @@ a:hover {
 
 /* Style for buttons */
 .btn {
-    background-color: #007bff;
+    background-color: #1DB954; /* Spotify green */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #1ED760; /* Slightly lighter green */
 }
 
 /* Style for forms */
@@ -61,12 +61,3 @@ a:hover {
 }
 
 /* Additional custom styles can be added here */
-
-.artist {
-    margin-bottom: 20px;
-}
-.artist img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
