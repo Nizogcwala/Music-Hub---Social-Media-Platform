@@ -14,9 +14,9 @@ TOKEN_URL = 'https://accounts.spotify.com/api/token'
 # Redirect URI for Spotify authorization flow
 REDIRECT_URI = 'http://localhost:5000/callback'
 
-@app.route('/')
+@app.route('/artist_search')
 def index():
-    return render_template('index.html')
+    return render_template('artist_search.html')
 
 @app.route('/login')
 def login():
