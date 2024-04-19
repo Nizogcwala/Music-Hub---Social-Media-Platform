@@ -22,6 +22,10 @@ def index():
 def artist_search():
     return render_template('artist_search.html')
 
+@app.route('/track_search')
+def track_search():
+    return render_template('track_search.html')
+
 @app.route('/login')
 def login():
     # Redirect the user to Spotify's authorization endpoint
