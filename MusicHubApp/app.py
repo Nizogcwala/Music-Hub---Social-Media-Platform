@@ -14,7 +14,7 @@ def artist_search():
     
     # Make a request to the Spotify API to search for artists
     # Replace 'YOUR_ACCESS_TOKEN' with your actual access token
-    headers = {'Authorization': 'Bearer YOUR_ACCESS_TOKEN'}
+    headers = {'Authorization': 'Bearer BQAYpjfAGnShAUb0nMX0I5MMBbt9mLkq6eaGXFoGMURnRa7yr06ztCKoMQKPg2baRjQm8B_RmiyrPg23uyjanfSgpst3_rccGRsYX_f331XpTn8tYMc'}
     params = {'q': query, 'type': 'artist'}
     response = requests.get('https://api.spotify.com/v1/search', headers=headers, params=params)
     
