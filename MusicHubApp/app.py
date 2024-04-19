@@ -18,10 +18,6 @@ REDIRECT_URI = 'http://localhost:5000/callback'
 def index():
     return render_template('index.html')
 
-@app.route('/artist_search')
-def index():
-    return render_template('artist_search.html')
-
 @app.route('/login')
 def login():
     # Redirect the user to Spotify's authorization endpoint
