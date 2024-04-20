@@ -14,13 +14,10 @@
         <h1>Welcome to Music Hub</h1>
         <p>Discover and explore your favorite artists and tracks.</p>
         <div class="links">
-            <a href="{{ url_for('artist_search') }}">Search for Artists</a>
+            <!-- Add target="_blank" attribute to open Spotify in a new tab -->
+            <a href="https://www.spotify.com/" target="_blank">Search for Artists</a>
             <form action="{{ url_for('artist_search') }}" method="get">
                 <input type="text" name="artist_name" placeholder="Search for an artist">
-                <button type="submit">Search</button>
-            </form>
-            <form action="{{ url_for('artist_search') }}" method="GET">
-                <input type="text" name="query" placeholder="Search for artists">
                 <button type="submit">Search</button>
             </form>
             <form action="{{ url_for('track_search') }}" method="GET">
