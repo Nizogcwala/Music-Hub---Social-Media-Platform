@@ -8,10 +8,9 @@
 </head>
 <body>
  <audio controls>
-    <source src="templates/Nizo Hallway.mp3" type="audio/mpeg"/>
+    <source src="{{ url_for('static', filename='Nizo Hallway.mp3') }}" type="audio/mpeg">
  </audio>   
- <source src="{{ url_for('templates', filename='Nizo Hallway.mp3') }}">
-    <div class="container">
+     <div class="container">
         <h1>Welcome to Music Hub</h1>
         <p>Discover and explore your favorite artists and tracks.</p>
         <div class="links">
