@@ -46,11 +46,10 @@
             </form>          
             <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
+            <p>Music Hub Chat box</p>            
             <!-- Chat box -->
-            <div class="chat-box">
-                <div class="message"><span class="user">User1:</span> Hello!</div>
-                <div class="message"><span class="user">User2:</span> Hi there!</div>
-                <!-- Add more messages here -->
+            <div class="chat-box" id="chat-box">
+                <!-- Existing chat messages will be dynamically populated here -->
             </div>
 
             <!-- Chat input form -->
@@ -60,5 +59,25 @@
             </form>
         </div>
     </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get user input message
+            var message = document.getElementById('message').value;
+
+            // Create a new message element
+            var messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.innerHTML = '<span class="user">You:</span> ' + message;
+
+            // Add the message to the chat box
+            document.getElementById('chat-box').appendChild(messageElement);
+
+            // Clear the input field
+            document.getElementById('message').value = '';
+        });
+    </script>
 </body>
 </html>
